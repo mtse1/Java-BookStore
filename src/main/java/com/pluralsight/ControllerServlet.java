@@ -93,7 +93,7 @@ public class ControllerServlet extends HttpServlet {
 		dispatcher.forward(request, response);
 	}
 
-	private void updateBook(HttpServletRequest request, HttpServletResponse response) 
+	private void deleteBook(HttpServletRequest request, HttpServletResponse response) 
 		throws ClassNotFoundException, SQLException, ServletException, IOException {
 		
 		int id = Integer.parseInt(request.getParameter("id"));
@@ -103,7 +103,7 @@ public class ControllerServlet extends HttpServlet {
 		response.sendRedirect("list");
 	}
 	
-	private void deleteBook(HttpServletRequest request, HttpServletResponse response) 
+	private void updateBook(HttpServletRequest request, HttpServletResponse response) 
 		throws ClassNotFoundException, SQLException, ServletException, IOException {
 		
 		int id = Integer.parseInt(request.getParameter("id"));

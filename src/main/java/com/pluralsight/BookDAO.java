@@ -105,6 +105,8 @@ public class BookDAO {
     }
     
     public void updateBook(Book book) {
+    	if(book == null) return;
+    	
     	String sql = "UPDATE book SET title = ?, author = ?, price = ? WHERE id = ?";
     	
     	try {
